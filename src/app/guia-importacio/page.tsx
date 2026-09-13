@@ -1,1 +1,2 @@
-import { PlaceholderPage } from "@/components/layout/placeholder-page"; export default function Page(){return <PlaceholderPage eyebrow="Procés" title="Guia d'importació" description="Una guia pràctica i específica per vehicle per no perdre cap pas important." nextStep="Més endavant hi afegirem la checklist, documents, costos i avisos per etapa."/>}
+import { ImportGuide } from "@/features/import-guide/import-guide";
+export default function Page(){return <ImportGuide/>}
