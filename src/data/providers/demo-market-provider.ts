@@ -1,0 +1,3 @@
+import type { MarketListing } from "@/domain/market/market-listing";
+/** Dades fictícies locals per provar el flux. No provenen de cap portal ni API externa. */
+export const demoGermanListings:MarketListing[]=[{id:"demo-1",make:"BMW",model:"320d Touring",year:2021,mileageKm:68000,fuelType:"Diesel",co2GKm:130,price:18400,country:"DE",firstSeenAt:"2026-09-01",lastSeenAt:"2026-09-13"},{id:"demo-2",make:"Mercedes-Benz",model:"C 220 d Estate",year:2020,mileageKm:82000,fuelType:"Diesel",co2GKm:136,price:19200,country:"DE",firstSeenAt:"2026-09-05",lastSeenAt:"2026-09-13"},{id:"demo-3",make:"Audi",model:"A4 Avant 35 TDI",year:2021,mileageKm:71000,fuelType:"Diesel",co2GKm:128,price:20500,country:"DE",firstSeenAt:"2026-08-28",lastSeenAt:"2026-09-13"}];

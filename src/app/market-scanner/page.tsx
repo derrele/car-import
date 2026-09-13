@@ -1,1 +1,2 @@
-import { PlaceholderPage } from "@/components/layout/placeholder-page"; export default function Page(){return <PlaceholderPage eyebrow="Oportunitats" title="Market Scanner" description="Compara vehicles normalitzats entre Alemanya i Espanya per trobar operacions rendibles." nextStep="No hi ha cap font de dades connectada. Primer definirem el motor de càlcul i providers desacoblats; després s'integraran només fonts autoritzades."/>}
+import { ScannerPreview } from "@/features/market-scanner/scanner-preview";
+export default function Page(){return <ScannerPreview/>}
