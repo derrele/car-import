@@ -1,0 +1,1 @@
+import type { NormalizedVehicle } from "@/domain/vehicles/normalized-vehicle"; export interface VehicleAnalysisInput { vehicle:NormalizedVehicle; purchasePrice:number; expectedSalePrice:number; } export interface VehicleAnalysisResult { totalCost:number; grossProfit:number; roi:number; margin:number; }

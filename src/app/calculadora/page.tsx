@@ -1,0 +1,1 @@
+import { PlaceholderPage } from "@/components/layout/placeholder-page"; export default function Page(){return <PlaceholderPage eyebrow="Anàlisi" title="Calculadora" description="Calcula la viabilitat d'una importació amb dades clares i traçables." nextStep="El Sprint 3 incorporarà el Calculation Engine provat i, posteriorment, les anàlisis ràpida i avançada."/>}

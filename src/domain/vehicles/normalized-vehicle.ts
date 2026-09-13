@@ -1,0 +1,1 @@
+/** Model independent de qualsevol font de mercat. */ export interface NormalizedVehicle { id:string; make:string; model:string; year:number; mileageKm:number; fuelType:string; transmission?:string; co2GKm?:number; sourceUrl?:string; }
