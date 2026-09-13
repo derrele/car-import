@@ -1,0 +1,3 @@
+import type { Operation, OperationStage } from "@/domain/operations/operation-types";
+const key="car-import.operations.v1"; const read=():Operation[]=>typeof window==="undefined"?[]:JSON.parse(window.localStorage.getItem(key)??"[]") as Operation[]; const write=(operations:Operation[])=>window.localStorage.setItem(key,JSON.stringify(operations));
+export const operationRepository={list:read,create:(input:Omit<Operation,"id"|"createdAt">)=>{const item:Operation={...input,id:crypto.randomUUID(),createdAt:new Date().toISOString()};write([item,...read()]);return item},updateStage:(id:string,stage:OperationStage)=>write(read().map(item=>item.id===id?{...item,stage}:item))};

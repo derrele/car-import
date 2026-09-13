@@ -1,1 +1,2 @@
-import { PlaceholderPage } from "@/components/layout/placeholder-page"; export default function Page(){return <PlaceholderPage eyebrow="Operacions" title="Els meus cotxes" description="Segueix cada vehicle des de l'anàlisi fins a la venda." nextStep="Aquest espai acollirà el pipeline: analitzant, negociant, comprat, transport, matriculació, preparació, en venda i venut."/>}
+import { OperationsBoard } from "@/features/operations/operations-board";
+export default function Page(){return <OperationsBoard/>}
