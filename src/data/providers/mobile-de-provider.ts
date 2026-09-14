@@ -1,4 +1,6 @@
 import "server-only";
+import { normalizeMobileDeSearchResponse, type MobileDeSearchResponse } from "./mobile-de-normalizer";
+import type { MarketListing } from "@/domain/market/market-listing";
 
 export interface MobileDeSearchCriteria {
   make?: string;
@@ -27,10 +29,9 @@ export function getMobileDeConnectionStatus(): MobileDeConnectionStatus {
 
 /**
  * Connector oficial de Mobile.de. Les credencials només s'utilitzen al servidor.
- * La normalització de la resposta es connectarà quan l'accés API del compte estigui actiu.
  */
 export class MobileDeProvider {
-  async searchRaw(criteria: MobileDeSearchCriteria): Promise<unknown> {
+  async searchRaw(criteria: MobileDeSearchCriteria): Promise<MobileDeSearchResponse> {
     const username = process.env.MOBILE_DE_API_USERNAME;
     const password = process.env.MOBILE_DE_API_PASSWORD;
 
@@ -67,6 +68,10 @@ export class MobileDeProvider {
       throw new Error(`Mobile.de ha respost amb l'estat ${response.status}.`);
     }
 
-    return response.json();
+    return response.json() as Promise<MobileDeSearchResponse>;
+  }
+
+  async search(criteria: MobileDeSearchCriteria): Promise<MarketListing[]> {
+    return normalizeMobileDeSearchResponse(await this.searchRaw(criteria));
   }
 }
