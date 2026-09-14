@@ -10,6 +10,10 @@ Aplicació per analitzar la rendibilitat d'importar vehicles, inicialment d'Alem
 - Separació inicial entre `components` (UI), `features` (pantalles), `domain` (models), `data` (providers) i `lib/calculation-engine` (lògica pura futura).
 - Sense càlculs fiscals, integracions de mercat ni scraping.
 
+## Mobile.de
+
+El connector del Search API oficial està preparat, però necessita credencials autoritzades per Mobile.de. Copia `.env.example` a `.env.local` i omple les dues variables només quan Mobile.de t'hagi concedit l'accés. Aquest fitxer no es puja a GitHub.
+
 ## Executar en local
 
 Amb pnpm disponible, executa `pnpm dev` dins la carpeta del projecte i obre la URL que aparegui al navegador.
